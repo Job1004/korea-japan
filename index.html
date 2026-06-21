@@ -7,7 +7,7 @@
 <meta name="keywords" content="한일교류, 청년, 지역문제해결, 충남대학교, ESG센터, Korea-Japan, Youth, Local Innovation, Challenge, 대전, 국제교류, 대학생">
 <meta name="author" content="충남대학교 ESG센터">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://job1004.github.io/korea-japan/">
+<link rel="canonical" href="https://cnu-esg.kr/korea-japan-youth">
 
 <!-- Open Graph (카카오톡·Facebook·LinkedIn 공유 미리보기) -->
 <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="800">
-<meta property="og:url" content="https://job1004.github.io/korea-japan/">
+<meta property="og:url" content="https://cnu-esg.kr/korea-japan-youth">
 <meta property="og:site_name" content="충남대학교 ESG센터">
 <meta property="og:locale" content="ko_KR">
 
@@ -568,6 +568,64 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
 .divider {
   height: 1px; background: var(--gray-light); max-width: 1200px; margin: 0 auto;
 }
+
+/* ===== GOVERNANCE DIAGRAM ===== */
+.governance {
+  background: linear-gradient(160deg, #0a1628 0%, #1B3A6B 50%, #0a1628 100%);
+  padding: 90px 0 80px; position: relative; overflow: hidden;
+}
+.governance::before {
+  content: ''; position: absolute; top: -200px; left: 50%;
+  transform: translateX(-50%); width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(74,144,217,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.governance .section-title { color: white; }
+.governance .section-desc { color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
+.governance .section-badge { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.2); }
+.gov-wrapper { position: relative; display: flex; gap: 28px; align-items: stretch; max-width: 980px; margin: 52px auto 44px; }
+.gov-col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.gov-center {
+  width: 210px; flex-shrink: 0;
+  background: linear-gradient(145deg, #1e4d8c 0%, #0f2d5a 100%);
+  border: 2px solid rgba(74,144,217,0.5); border-radius: 20px; padding: 32px 18px;
+  text-align: center; box-shadow: 0 0 0 6px rgba(74,144,217,0.08), 0 16px 48px rgba(0,0,0,0.4);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+}
+.gov-center-icon { font-size: 30px; margin-bottom: 10px; }
+.gov-center-badge { background: rgba(74,144,217,0.25); color: rgba(255,255,255,0.85); font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(74,144,217,0.4); margin-bottom: 10px; display: inline-block; }
+.gov-center-name { font-size: 19px; font-weight: 900; color: white; font-family: 'Noto Sans KR', sans-serif; line-height: 1.4; margin: 6px 0 4px; }
+.gov-center-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 6px; line-height: 1.6; }
+.gov-node { flex: 1; background: rgba(255,255,255,0.97); border-radius: 16px; padding: 20px 20px 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); position: relative; z-index: 2; display: flex; flex-direction: column; border-top: 4px solid transparent; transition: transform 0.2s, box-shadow 0.2s; }
+.gov-node:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,0.25); }
+.gov-col:first-child .gov-node { border-top-color: #2A5298; }
+.gov-col:last-child .gov-node { border-top-color: #C8392B; }
+.gov-node-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 12px; flex-shrink: 0; }
+.gov-col:first-child .gov-node-icon { background: linear-gradient(135deg, #2A5298, #1B3A6B); }
+.gov-col:last-child .gov-node-icon { background: linear-gradient(135deg, #C8392B, #8e1f1a); }
+.gov-node-label { font-size: 11px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eef1f7; }
+.gov-col:first-child .gov-node-label { color: #2A5298; }
+.gov-col:last-child .gov-node-label { color: #C8392B; }
+.gov-node-main { font-size: 14px; font-weight: 900; color: #1a202c; font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; margin-bottom: 8px; flex: 1; }
+.gov-node-sub { font-size: 11px; color: #8A94A6; line-height: 1.5; }
+.gov-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.gov-side-label { text-align: center; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 4px; display: inline-block; align-self: center; }
+.gov-side-kr { background: rgba(42,82,152,0.2); color: #7ba3e0; border: 1px solid rgba(42,82,152,0.35); }
+.gov-side-jp { background: rgba(200,57,43,0.2); color: #e08a80; border: 1px solid rgba(200,57,43,0.35); }
+.gov-flow { display: flex; justify-content: center; align-items: center; gap: 0; margin-top: 8px; flex-wrap: wrap; }
+.gov-step-item { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 40px; padding: 11px 22px; color: white; transition: background 0.2s; }
+.gov-step-item:hover { background: rgba(255,255,255,0.12); }
+.gov-step-num { width: 28px; height: 28px; background: linear-gradient(135deg, var(--sky), #2A5298); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; color: white; flex-shrink: 0; }
+.gov-step-label { font-size: 13px; font-weight: 700; font-family: 'Noto Sans KR',sans-serif; white-space: nowrap; }
+.gov-arrow-txt { color: rgba(255,255,255,0.3); font-size: 20px; padding: 0 6px; }
+@media (max-width: 768px) {
+  .gov-wrapper { flex-direction: column; }
+  .gov-center { width: 100%; }
+  .gov-svg { display: none; }
+  .gov-side-label { display: none; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -636,7 +694,8 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
     <li><a href="#process">운영과정</a></li>
     <li><a href="#exchange">교류행사</a></li>
     <li><a href="#participation">참여안내</a></li>
-    <li><a href="#committee">준비위원회</a></li>
+    <li><a href="#governance">거버넌스</a></li>
+      <li><a href="#committee">준비위원회</a></li>
     <li><a href="#apply" class="nav-cta">신청하기</a></li>
   </ul>
 </nav>
@@ -681,7 +740,7 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
         </div>
         <div class="hero-stat-card wide">
           <div class="stat-num" style="font-size:22px;font-family:'Noto Sans KR',sans-serif;font-weight:900;">충남대학교 ESG센터</div>
-          <div class="stat-label">주관기관 · 사무국 소재지</div>
+          <div class="stat-label">주관기관 · 사무국 소재지 (대전)</div>
         </div>
         <div class="hero-image-card">
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="팀 협업">
@@ -1041,6 +1100,97 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
   </div>
 </section>
 
+<!-- GOVERNANCE -->
+<section class="governance" id="governance">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-badge">거버넌스</div>
+      <h2 class="section-title">준비위원회 거버넌스</h2>
+      <p class="section-desc">Korea–Japan Youth Regional Problem-Solving Project Governance</p>
+    </div>
+    <div class="gov-wrapper fade-in" id="gov-wrapper">
+      <svg class="gov-svg" id="gov-svg"></svg>
+      <div class="gov-col">
+        <div class="gov-side-label gov-side-kr">🇰🇷 한국</div>
+        <div class="gov-node" id="gn-1">
+          <div class="gov-node-icon">🏢</div>
+          <div class="gov-node-label">지자체 협력 (한국)</div>
+          <div class="gov-node-main">대전광역시<br>충청남도<br>세종시</div>
+          <div class="gov-node-sub">지역 의제 · 정책 연계</div>
+        </div>
+        <div class="gov-node" id="gn-2">
+          <div class="gov-node-icon">🌐</div>
+          <div class="gov-node-label">재외 · 외교 협력</div>
+          <div class="gov-node-main">재외동포청<br>도쿄대사관<br>재일본대한민국민단</div>
+          <div class="gov-node-sub">현지 협력 · 네트워크 연계</div>
+        </div>
+      </div>
+      <div class="gov-center" id="gov-center">
+        <div class="gov-center-icon">🏛</div>
+        <div class="gov-center-badge">준비위원회</div>
+        <div class="gov-center-name">충남대학교<br>ESG센터</div>
+        <div class="gov-center-sub">총괄기획<br>운영조정</div>
+      </div>
+      <div class="gov-col">
+        <div class="gov-side-label gov-side-jp">🇯🇵 일본 · 파트너</div>
+        <div class="gov-node" id="gn-3">
+          <div class="gov-node-icon">🗾</div>
+          <div class="gov-node-label">지자체 협력 (일본)</div>
+          <div class="gov-node-main">협력 지방정부</div>
+          <div class="gov-node-sub">지역 의제 공동 발굴 · 현장 지원</div>
+        </div>
+        <div class="gov-node" id="gn-4">
+          <div class="gov-node-icon">🤝</div>
+          <div class="gov-node-label">실행 파트너</div>
+          <div class="gov-node-main">공공기관 및 민간기업</div>
+          <div class="gov-node-sub">실증 · 후원 · 확산</div>
+        </div>
+      </div>
+    </div>
+    <div class="gov-flow fade-in">
+      <div class="gov-step-item"><div class="gov-step-num">01</div><div class="gov-step-label">문제 발굴</div></div>
+      <span class="gov-arrow-txt">→</span>
+      <div class="gov-step-item"><div class="gov-step-num">02</div><div class="gov-step-label">청년 교류</div></div>
+      <span class="gov-arrow-txt">→</span>
+      <div class="gov-step-item"><div class="gov-step-num">03</div><div class="gov-step-label">실증</div></div>
+      <span class="gov-arrow-txt">→</span>
+      <div class="gov-step-item"><div class="gov-step-num">04</div><div class="gov-step-label">성과 확산</div></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  function drawArrows(){
+    var svg=document.getElementById('gov-svg'),wrapper=document.getElementById('gov-wrapper'),center=document.getElementById('gov-center');
+    if(!svg||!wrapper||!center)return;
+    var nodes=['gn-1','gn-2','gn-3','gn-4'].map(function(id){return document.getElementById(id);}).filter(Boolean);
+    var wr=wrapper.getBoundingClientRect(),cr=center.getBoundingClientRect();
+    svg.setAttribute('width',wrapper.offsetWidth);svg.setAttribute('height',wrapper.offsetHeight);
+    while(svg.firstChild)svg.removeChild(svg.firstChild);
+    var ns='http://www.w3.org/2000/svg',defs=document.createElementNS(ns,'defs');
+    defs.innerHTML='<marker id="aKR" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="rgba(74,144,217,0.9)"/></marker><marker id="aJP" markerWidth="9" markerHeight="7" refX="0" refY="3.5" orient="auto"><polygon points="9 0,0 3.5,9 7" fill="rgba(200,57,43,0.9)"/></marker>';
+    svg.appendChild(defs);
+    var ccx=cr.left-wr.left+cr.width/2,ccy=cr.top-wr.top+cr.height/2;
+    nodes.forEach(function(node){
+      var nr=node.getBoundingClientRect();
+      var ncx=nr.left-wr.left+nr.width/2,ncy=nr.top-wr.top+nr.height/2;
+      var isLeft=ncx<ccx,x1,y1,x2,y2,color,mid;
+      if(isLeft){x1=nr.right-wr.left;y1=ncy;x2=cr.left-wr.left;y2=ccy;color='rgba(74,144,217,0.6)';}
+      else{x1=cr.right-wr.left;y1=ccy;x2=nr.left-wr.left;y2=ncy;color='rgba(200,57,43,0.6)';}
+      mid=(x1+x2)/2;
+      var p=document.createElementNS(ns,'path');
+      p.setAttribute('d','M '+x1+' '+y1+' C '+mid+' '+y1+' '+mid+' '+y2+' '+x2+' '+y2);
+      p.setAttribute('fill','none');p.setAttribute('stroke',color);p.setAttribute('stroke-width','2');
+      p.setAttribute('marker-end','url(#'+(isLeft?'aKR':'aJP')+')');
+      svg.appendChild(p);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(drawArrows,150);});}
+  else{setTimeout(drawArrows,150);}
+  window.addEventListener('resize',drawArrows);
+})();
+</script>
+
 <!-- APPLY -->
 <section class="apply" id="apply">
   <div class="container">
@@ -1337,7 +1487,7 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI5NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMEMyRDcyIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijg0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwQzJENzIiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPCEtLSBUT1AgYXJjIGxhYmVsIC0tPgogIDxwYXRoIGlkPSJ0YSIgZmlsbD0ibm9uZSIgZD0iTSA5LDEwMCBBIDkxLDkxIDAgMCwxIDE5MSwxMDAiLz4KICA8dGV4dCBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS4ycHgiIGxldHRlci1zcGFjaW5nPSIxLjZweCIgZmlsbD0iIzBDMkQ3MiI+CiAgICA8dGV4dFBhdGggaHJlZj0iI3RhIiBzdGFydE9mZnNldD0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DSFVOR05BTSBOQVRJT05BTCBVTklWRVJTSVRZPC90ZXh0UGF0aD4KICA8L3RleHQ+CiAgPCEtLSBCT1RUT00gYXJjIGxhYmVsIChMYXRpbiBjaGFycyBmb3Ig7Lap64Ko64yA7ZWZ6rWQIHNwZWxsZWQgb3V0KSAtLT4KICA8cGF0aCBpZD0iYmEiIGZpbGw9Im5vbmUiIGQ9Ik0gMTgsMTE4IEEgODYsODYgMCAwLDAgMTgyLDExOCIvPgogIDx0ZXh0IGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5cHgiIGxldHRlci1zcGFjaW5nPSIzLjVweCIgZmlsbD0iIzBDMkQ3MiI+CiAgICA8dGV4dFBhdGggaHJlZj0iI2JhIiBzdGFydE9mZnNldD0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DSFVOR05BTSBVTklWLjwvdGV4dFBhdGg+CiAgPC90ZXh0PgogIDwhLS0gTGVmdCBsYXVyZWwgLS0+CiAgPGcgZmlsbD0iIzBDMkQ3MiI+CiAgICA8ZWxsaXBzZSBjeD0iMjUiIGN5PSI5MyIgcng9IjUiIHJ5PSI5IiB0cmFuc2Zvcm09InJvdGF0ZSgtNTAsMjUsOTMpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMjIiIGN5PSI3OSIgcng9IjQuNSIgcnk9IjguNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQwLDIyLDc5KSIvPgogICAgPGVsbGlwc2UgY3g9IjIyIiBjeT0iNjUiIHJ4PSI0IiByeT0iOCIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwLDIyLDY1KSIvPgogICAgPGVsbGlwc2UgY3g9IjI1IiBjeT0iNTIiIHJ4PSIzLjgiIHJ5PSI3LjUiIHRyYW5zZm9ybT0icm90YXRlKC0xOCwyNSw1MikiLz4KICAgIDxlbGxpcHNlIGN4PSIzMCIgY3k9IjQxIiByeD0iMy41IiByeT0iNyIgdHJhbnNmb3JtPSJyb3RhdGUoLTYsMzAsNDEpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMzciIGN5PSIzMyIgcng9IjMiIHJ5PSI2IiB0cmFuc2Zvcm09InJvdGF0ZSg1LDM3LDMzKSIvPgogICAgPGVsbGlwc2UgY3g9IjMxIiBjeT0iOTEiIHJ4PSI1IiByeT0iOC41IiB0cmFuc2Zvcm09InJvdGF0ZSgtNzIsMzEsOTEpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMjkiIGN5PSI3NyIgcng9IjQuNSIgcnk9IjgiIHRyYW5zZm9ybT0icm90YXRlKC02MiwyOSw3NykiLz4KICAgIDxlbGxpcHNlIGN4PSIzMCIgY3k9IjYzIiByeD0iNCIgcnk9IjcuNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwLDMwLDYzKSIvPgogICAgPGVsbGlwc2UgY3g9IjM0IiBjeT0iNTEiIHJ4PSIzLjUiIHJ5PSI3IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzgsMzQsNTEpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMzkiIGN5PSI0MSIgcng9IjMiIHJ5PSI2LjUiIHRyYW5zZm9ybT0icm90YXRlKC0yNiwzOSw0MSkiLz4KICAgIDxsaW5lIHgxPSIyMyIgeTE9IjEwMCIgeDI9IjM3IiB5Mj0iMzAiIHN0cm9rZT0iIzBDMkQ3MiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICA8L2c+CiAgPCEtLSBSaWdodCBsYXVyZWwgKG1pcnJvcikgLS0+CiAgPGcgZmlsbD0iIzBDMkQ3MiI+CiAgICA8ZWxsaXBzZSBjeD0iMTc1IiBjeT0iOTMiIHJ4PSI1IiByeT0iOSIgdHJhbnNmb3JtPSJyb3RhdGUoNTAsMTc1LDkzKSIvPgogICAgPGVsbGlwc2UgY3g9IjE3OCIgY3k9Ijc5IiByeD0iNC41IiByeT0iOC41IiB0cmFuc2Zvcm09InJvdGF0ZSg0MCwxNzgsNzkpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTc4IiBjeT0iNjUiIHJ4PSI0IiByeT0iOCIgdHJhbnNmb3JtPSJyb3RhdGUoMzAsMTc4LDY1KSIvPgogICAgPGVsbGlwc2UgY3g9IjE3NSIgY3k9IjUyIiByeD0iMy44IiByeT0iNy41IiB0cmFuc2Zvcm09InJvdGF0ZSgxOCwxNzUsNTIpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTcwIiBjeT0iNDEiIHJ4PSIzLjUiIHJ5PSI3IiB0cmFuc2Zvcm09InJvdGF0ZSg2LDE3MCw0MSkiLz4KICAgIDxlbGxpcHNlIGN4PSIxNjMiIGN5PSIzMyIgcng9IjMiIHJ5PSI2IiB0cmFuc2Zvcm09InJvdGF0ZSgtNSwxNjMsMzMpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTY5IiBjeT0iOTEiIHJ4PSI1IiByeT0iOC41IiB0cmFuc2Zvcm09InJvdGF0ZSg3MiwxNjksOTEpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTcxIiBjeT0iNzciIHJ4PSI0LjUiIHJ5PSI4IiB0cmFuc2Zvcm09InJvdGF0ZSg2MiwxNzEsNzcpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTcwIiBjeT0iNjMiIHJ4PSI0IiByeT0iNy41IiB0cmFuc2Zvcm09InJvdGF0ZSg1MCwxNzAsNjMpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTY2IiBjeT0iNTEiIHJ4PSIzLjUiIHJ5PSI3IiB0cmFuc2Zvcm09InJvdGF0ZSgzOCwxNjYsNTEpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTYxIiBjeT0iNDEiIHJ4PSIzIiByeT0iNi41IiB0cmFuc2Zvcm09InJvdGF0ZSgyNiwxNjEsNDEpIi8+CiAgICA8bGluZSB4MT0iMTc3IiB5MT0iMTAwIiB4Mj0iMTYzIiB5Mj0iMzAiIHN0cm9rZT0iIzBDMkQ3MiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICA8L2c+CiAgPCEtLSBCb3R0b20gY3Jvc3MgLyBwZW4gZGVjb3JhdGlvbiAtLT4KICA8bGluZSB4MT0iNzAiIHkxPSIxNTMiIHgyPSI5MiIgeTI9IjE0MyIgc3Ryb2tlPSIjMEMyRDcyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjEzMCIgeTE9IjE1MyIgeDI9IjEwOCIgeTI9IjE0MyIgc3Ryb2tlPSIjMEMyRDcyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjcwIiB5MT0iMTQzIiB4Mj0iOTIiIHkyPSIxNTMiIHN0cm9rZT0iIzBDMkQ3MiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSIxMzAiIHkxPSIxNDMiIHgyPSIxMDgiIHkyPSIxNTMiIHN0cm9rZT0iIzBDMkQ3MiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwhLS0gQ3Jvd24gYmFzZSAtLT4KICA8cmVjdCB4PSI3MiIgeT0iMTEwIiB3aWR0aD0iNTYiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSJub25lIiBzdHJva2U9IiMwQzJENzIiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgPGxpbmUgeDE9IjcyIiB5MT0iMTE4IiB4Mj0iMTI4IiB5Mj0iMTE4IiBzdHJva2U9IiMwQzJENzIiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPCEtLSBDcm93biBzcGlyZXMgLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iNzIsMTEwIDcyLDg2IDgzLDk2IDEwMCw3MiAxMTcsOTYgMTI4LDg2IDEyOCwxMTAiCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiMwQzJENzIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSI3MCIgcj0iNCIgZmlsbD0iIzBDMkQ3MiIvPgogIDxjaXJjbGUgY3g9IjcyIiBjeT0iODUiIHI9IjIuNSIgZmlsbD0iIzBDMkQ3MiIvPgogIDxjaXJjbGUgY3g9IjEyOCIgY3k9Ijg1IiByPSIyLjUiIGZpbGw9IiMwQzJENzIiLz4KICA8bGluZSB4MT0iODYiIHkxPSIxMTAiIHgyPSI4NiIgeTI9IjExOCIgc3Ryb2tlPSIjMEMyRDcyIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMTAwIiB5MT0iMTEwIiB4Mj0iMTAwIiB5Mj0iMTE4IiBzdHJva2U9IiMwQzJENzIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxMTQiIHkxPSIxMTAiIHgyPSIxMTQiIHkyPSIxMTgiIHN0cm9rZT0iIzBDMkQ3MiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==" alt="충남대학교 ESG센터" style="height:26px;filter:brightness(0) invert(0.45);">
     <div class="footer-logo">🇰🇷 × 🇯🇵 &nbsp;한일 청년 지역문제 해결 프로젝트</div>
   </div>
-  <p>Korea–Japan Youth Local Innovation Challenge &nbsp;|&nbsp; 주관: 충남대학교 ESG센터</p>
+  <p>Korea–Japan Youth Local Innovation Challenge &nbsp;|&nbsp; 주관: 충남대학교 ESG센터 (대전)</p>
   <p style="margin-top:8px; font-size:11px;">© 2026 한일 청년 지역문제 해결 프로젝트 준비위원회. All rights reserved.</p>
 </footer>
 
