@@ -1772,6 +1772,7 @@ window.addEventListener('scroll', () => {
       <input class="admin-search" id="adminSearch" placeholder="🔍 이름·이메일·기관명 검색…" oninput="renderAdminTable()">
       <button class="admin-btn" onclick="loadAdminData()">↻ 새로고침</button>
       <button class="admin-btn admin-btn-primary" onclick="adminExportCSV()">⬇ CSV 저장</button>
+      <button class="admin-btn" onclick="showAdminSetup()" style="margin-left:auto;">⚙️ URL 설정</button>
       <div class="admin-count" id="adminCount"></div>
     </div>
     <div class="admin-table-wrap" id="adminTableArea">
@@ -1788,7 +1789,7 @@ var ADMIN_PASSWORD = 'Hmg20022002';
 // ★ Google Sheets CSV URL (시트를 웹에 게시 후 입력)
 // [파일] → [웹에 게시] → CSV → 각 시트 URL 복사
 var CSV_UNIV    = localStorage.getItem('csvUniv')    || '';
-var CSV_COMPANY = localStorage.getItem('csvCompany') || '';
+var CSV_COMPANY = localStorage.getItem('csvCompany') || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTRFYr6Sv0y1F5usNt2IGX75COqIvgxHLHMCycYhacSAF_r6ANQfsIGP5EYnECQsDJtqDydkKgGKOKJ/pub?gid=572231368&single=true&output=csv';
 // ─────────────────────────────────────────────────────────────────────
 
 var adminData = { univ: [], company: [] };
