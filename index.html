@@ -626,6 +626,106 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
   .gov-side-label { display: none; }
 }
 
+
+/* ── ADMIN PANEL ── */
+#adminOverlay {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(8,16,36,0.97); overflow-y: auto;
+}
+#adminOverlay.show { display: flex; flex-direction: column; }
+.admin-header {
+  background: linear-gradient(135deg,#0F2448,#1B3A6B);
+  padding: 18px 28px; display: flex; align-items: center; justify-content: space-between;
+  flex-shrink: 0; position: sticky; top: 0; z-index: 10;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+.admin-header-title { color: #fff; font-size: 18px; font-weight: 900; }
+.admin-header-sub { color: rgba(255,255,255,0.45); font-size: 12px; margin-top: 2px; }
+.admin-close-btn {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; padding: 7px 16px; border-radius: 8px; cursor: pointer;
+  font-size: 13px; font-weight: 700; font-family: inherit;
+}
+.admin-close-btn:hover { background: rgba(255,255,255,0.2); }
+.admin-body { flex: 1; padding: 28px; max-width: 1300px; width: 100%; margin: 0 auto; }
+.admin-stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 14px; margin-bottom: 24px; }
+.astat {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 16px 20px; border-top: 3px solid #2A5298;
+}
+.astat.red { border-top-color: #C8392B; }
+.astat.gold { border-top-color: #D4AF37; }
+.astat-num { font-size: 32px; font-weight: 900; color: #fff; line-height: 1; }
+.astat-label { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 4px; }
+.admin-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.atab {
+  padding: 9px 22px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.15);
+  background: transparent; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: all 0.2s;
+}
+.atab.active { background: #1B3A6B; color: #fff; border-color: #2A5298; }
+.admin-toolbar { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+.admin-search {
+  flex: 1; min-width: 200px; max-width: 320px; padding: 9px 14px;
+  background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px; color: #fff; font-size: 13px; font-family: inherit; outline: none;
+}
+.admin-search::placeholder { color: rgba(255,255,255,0.3); }
+.admin-search:focus { border-color: rgba(74,144,217,0.6); }
+.admin-btn {
+  padding: 9px 16px; border-radius: 8px; font-size: 12px; font-weight: 700;
+  font-family: inherit; cursor: pointer; border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); transition: all 0.2s;
+}
+.admin-btn-primary { background: #1B3A6B; border-color: #2A5298; color: #fff; }
+.admin-btn-primary:hover { background: #2A5298; }
+.admin-count { font-size: 12px; color: rgba(255,255,255,0.35); margin-left: auto; }
+.admin-table-wrap { background: rgba(255,255,255,0.04); border-radius: 12px; overflow: auto; border: 1px solid rgba(255,255,255,0.08); }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 600px; }
+.admin-table thead tr { background: rgba(27,58,107,0.9); }
+.admin-table thead th {
+  color: rgba(255,255,255,0.85); font-weight: 700; padding: 11px 13px;
+  text-align: left; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.admin-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.admin-table tbody tr:hover { background: rgba(255,255,255,0.05); }
+.admin-table td { padding: 10px 13px; color: rgba(255,255,255,0.75); vertical-align: top; }
+.admin-table td.td-nowrap { white-space: nowrap; }
+.abadge { display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 700; }
+.abadge-kr { background: rgba(42,82,152,0.4); color: #7EB3FF; }
+.abadge-jp { background: rgba(200,57,43,0.3); color: #FF9A8E; }
+.admin-empty { text-align: center; padding: 50px; color: rgba(255,255,255,0.3); font-size: 14px; }
+#adminLoginBox {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(8,16,36,0.97); align-items: center; justify-content: center;
+}
+#adminLoginBox.show { display: flex; }
+.alog-box {
+  background: #1a2540; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 36px 44px; width: 340px; text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+.alog-icon { font-size: 32px; margin-bottom: 10px; }
+.alog-title { color: #fff; font-size: 18px; font-weight: 900; margin-bottom: 4px; }
+.alog-sub { color: rgba(255,255,255,0.4); font-size: 12px; margin-bottom: 24px; }
+.alog-input {
+  width: 100%; padding: 11px 14px; background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15); border-radius: 8px;
+  color: #fff; font-size: 14px; font-family: inherit; outline: none;
+}
+.alog-input:focus { border-color: rgba(74,144,217,0.6); }
+.alog-btn {
+  width: 100%; margin-top: 14px; padding: 12px;
+  background: #1B3A6B; color: #fff; border: none; border-radius: 8px;
+  font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer;
+}
+.alog-btn:hover { background: #2A5298; }
+.alog-err { color: #FF9A8E; font-size: 12px; margin-top: 8px; display: none; }
+.admin-footer-link {
+  display: inline-block; margin-top: 10px; color: rgba(255,255,255,0.15);
+  font-size: 11px; cursor: pointer; letter-spacing: 0.5px;
+}
+.admin-footer-link:hover { color: rgba(255,255,255,0.4); }
 </style>
 <script type="application/ld+json">
 {
@@ -1489,6 +1589,8 @@ footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
   </div>
   <p>Korea–Japan Youth Local Innovation Challenge &nbsp;|&nbsp; 주관: 충남대학교 ESG센터 (대전)</p>
   <p style="margin-top:8px; font-size:11px;">© 2026 한일 청년 지역문제 해결 프로젝트 준비위원회. All rights reserved.</p>
+
+  <span class="admin-footer-link" onclick="openAdmin()">🔐 관리자</span>
 </footer>
 
 <!-- MODAL -->
@@ -1632,5 +1734,267 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+
+<!-- ADMIN LOGIN -->
+<div id="adminLoginBox">
+  <div class="alog-box">
+    <div class="alog-icon">🔐</div>
+    <div class="alog-title">관리자 로그인</div>
+    <div class="alog-sub">사무국 전용 신청 현황 관리</div>
+    <input class="alog-input" type="password" id="adminPwInput" placeholder="비밀번호 입력"
+      onkeydown="if(event.key==='Enter')doAdminLogin()">
+    <button class="alog-btn" onclick="doAdminLogin()">로그인</button>
+    <div class="alog-err" id="adminLoginErr">비밀번호가 올바르지 않습니다.</div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminOverlay">
+  <div class="admin-header">
+    <div>
+      <div class="admin-header-title">📋 신청 현황 관리</div>
+      <div class="admin-header-sub">한일 청년 지역문제 해결 프로젝트 — 사무국 전용</div>
+    </div>
+    <button class="admin-close-btn" onclick="closeAdmin()">✕ 닫기</button>
+  </div>
+  <div class="admin-body">
+    <div class="admin-stats">
+      <div class="astat"><div class="astat-num" id="aStatTotal">–</div><div class="astat-label">전체 신청</div></div>
+      <div class="astat"><div class="astat-num" id="aStatUniv">–</div><div class="astat-label">대학 참여</div></div>
+      <div class="astat red"><div class="astat-num" id="aStatCo">–</div><div class="astat-label">기업·기관</div></div>
+      <div class="astat gold"><div class="astat-num" id="aStatToday">–</div><div class="astat-label">오늘 신청</div></div>
+    </div>
+    <div class="admin-tabs">
+      <button class="atab active" onclick="switchATab('univ',this)">🏛 대학 참여 신청</button>
+      <button class="atab" onclick="switchATab('company',this)">🏢 기업·기관 후원</button>
+    </div>
+    <div class="admin-toolbar">
+      <input class="admin-search" id="adminSearch" placeholder="🔍 이름·이메일·기관명 검색…" oninput="renderAdminTable()">
+      <button class="admin-btn" onclick="loadAdminData()">↻ 새로고침</button>
+      <button class="admin-btn admin-btn-primary" onclick="adminExportCSV()">⬇ CSV 저장</button>
+      <div class="admin-count" id="adminCount"></div>
+    </div>
+    <div class="admin-table-wrap" id="adminTableArea">
+      <div class="admin-empty">로그인 후 데이터가 표시됩니다.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── 관리자 설정 ───────────────────────────────────────────────────────
+// ★ 비밀번호 변경: 아래 값을 원하는 비밀번호로 교체하세요
+var ADMIN_PASSWORD = 'Hmg20022002';
+
+// ★ Google Sheets CSV URL (시트를 웹에 게시 후 입력)
+// [파일] → [웹에 게시] → CSV → 각 시트 URL 복사
+var CSV_UNIV    = localStorage.getItem('csvUniv')    || '';
+var CSV_COMPANY = localStorage.getItem('csvCompany') || '';
+// ─────────────────────────────────────────────────────────────────────
+
+var adminData = { univ: [], company: [] };
+var adminTab  = 'univ';
+var adminSortCol = -1, adminSortAsc = true;
+
+function openAdmin() {
+  document.getElementById('adminLoginBox').classList.add('show');
+  setTimeout(function(){ document.getElementById('adminPwInput').focus(); }, 100);
+}
+
+function doAdminLogin() {
+  var pw = document.getElementById('adminPwInput').value;
+  if (pw === ADMIN_PASSWORD) {
+    document.getElementById('adminLoginBox').classList.remove('show');
+    document.getElementById('adminOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+    loadAdminData();
+  } else {
+    document.getElementById('adminLoginErr').style.display = 'block';
+    document.getElementById('adminPwInput').value = '';
+  }
+}
+
+function closeAdmin() {
+  document.getElementById('adminOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+  document.getElementById('adminPwInput').value = '';
+  document.getElementById('adminLoginErr').style.display = 'none';
+}
+
+function switchATab(tab, btn) {
+  adminTab = tab;
+  document.querySelectorAll('.atab').forEach(function(t){ t.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('adminSearch').value = '';
+  adminSortCol = -1;
+  renderAdminTable();
+}
+
+function loadAdminData() {
+  if (!CSV_UNIV) {
+    showAdminSetup();
+    return;
+  }
+  document.getElementById('adminTableArea').innerHTML =
+    '<div class="admin-empty">⏳ 데이터 불러오는 중…</div>';
+
+  var urls  = [CSV_UNIV, CSV_COMPANY].filter(Boolean);
+  var keys  = ['univ', 'company'];
+  var done  = 0;
+
+  urls.forEach(function(url, i) {
+    fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now())
+      .then(function(r){ return r.text(); })
+      .then(function(csv){
+        adminData[keys[i]] = parseAdminCSV(csv);
+      })
+      .catch(function(){ adminData[keys[i]] = []; })
+      .finally(function(){
+        done++;
+        if (done === urls.length) {
+          updateAdminStats();
+          renderAdminTable();
+        }
+      });
+  });
+}
+
+function parseAdminCSV(csv) {
+  var lines = csv.trim().split('\n');
+  if (lines.length < 2) return [];
+  var headers = splitCSVRow(lines[0]);
+  return lines.slice(1).map(function(line) {
+    var vals = splitCSVRow(line);
+    var obj = {};
+    headers.forEach(function(h, i){ obj[h.trim()] = (vals[i] || '').trim(); });
+    return obj;
+  }).filter(function(r){ return Object.values(r).some(function(v){ return v; }); });
+}
+
+function splitCSVRow(line) {
+  var result = [], cur = '', inQ = false;
+  for (var i = 0; i < line.length; i++) {
+    var ch = line[i];
+    if (ch === '"') { inQ = !inQ; }
+    else if (ch === ',' && !inQ) { result.push(cur); cur = ''; }
+    else { cur += ch; }
+  }
+  result.push(cur);
+  return result;
+}
+
+function updateAdminStats() {
+  var today = new Date().toLocaleDateString('ko-KR').replace(/\. /g,'.').replace('.','');
+  var all = adminData.univ.concat(adminData.company);
+  var todayCount = all.filter(function(r){
+    return (r['접수일시'] || '').indexOf(today.slice(0,5)) >= 0;
+  }).length;
+  document.getElementById('aStatTotal').textContent = all.length;
+  document.getElementById('aStatUniv').textContent  = adminData.univ.length;
+  document.getElementById('aStatCo').textContent    = adminData.company.length;
+  document.getElementById('aStatToday').textContent = todayCount;
+}
+
+function renderAdminTable() {
+  var rows = (adminData[adminTab] || []).slice();
+  var q = (document.getElementById('adminSearch').value || '').trim().toLowerCase();
+  if (q) {
+    rows = rows.filter(function(r){
+      return Object.values(r).some(function(v){ return v.toLowerCase().indexOf(q) >= 0; });
+    });
+  }
+  if (adminSortCol >= 0 && rows.length) {
+    var key = Object.keys(rows[0])[adminSortCol];
+    rows.sort(function(a,b){
+      var va = a[key]||'', vb = b[key]||'';
+      return adminSortAsc ? va.localeCompare(vb,'ko') : vb.localeCompare(va,'ko');
+    });
+  }
+  document.getElementById('adminCount').textContent = rows.length + '건';
+
+  if (!rows.length) {
+    document.getElementById('adminTableArea').innerHTML =
+      '<div class="admin-empty">📭 데이터가 없습니다.<br><small style="color:rgba(255,255,255,0.2)">Google Sheets 게시 URL을 확인하세요.</small></div>';
+    return;
+  }
+
+  var headers = Object.keys(rows[0]);
+  var html = '<table class="admin-table"><thead><tr>' +
+    headers.map(function(h, i){
+      return '<th onclick="adminSortBy(' + i + ')">' + escAdmin(h) +
+        (adminSortCol===i ? (adminSortAsc?' ▲':' ▼') : '') + '</th>';
+    }).join('') + '</tr></thead><tbody>';
+
+  rows.forEach(function(row) {
+    html += '<tr>' + headers.map(function(h) {
+      var v = row[h] || '';
+      if (h === '국가') {
+        v = v === '한국' ? '<span class="abadge abadge-kr">🇰🇷 한국</span>'
+          : v === '일본' ? '<span class="abadge abadge-jp">🇯🇵 일본</span>'
+          : escAdmin(v);
+        return '<td>' + v + '</td>';
+      }
+      return '<td' + (h==='접수일시'?' class="td-nowrap"':'') + '>' + escAdmin(v) + '</td>';
+    }).join('') + '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('adminTableArea').innerHTML = html;
+}
+
+function adminSortBy(col) {
+  if (adminSortCol === col) { adminSortAsc = !adminSortAsc; }
+  else { adminSortCol = col; adminSortAsc = true; }
+  renderAdminTable();
+}
+
+function adminExportCSV() {
+  var rows = adminData[adminTab] || [];
+  if (!rows.length) { alert('내보낼 데이터가 없습니다.'); return; }
+  var headers = Object.keys(rows[0]);
+  var csv = '\uFEFF' + headers.join(',') + '\n' +
+    rows.map(function(r){
+      return headers.map(function(h){ return '"' + (r[h]||'').replace(/"/g,'""') + '"'; }).join(',');
+    }).join('\n');
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+  a.download = (adminTab==='univ' ? '대학참여신청' : '기업후원신청') + '_' +
+    new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+}
+
+function escAdmin(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function showAdminSetup() {
+  document.getElementById('adminTableArea').innerHTML = `
+  <div style="padding:32px 20px;max-width:600px;margin:0 auto;">
+    <div style="color:#fff;font-size:17px;font-weight:900;margin-bottom:20px;">⚙️ Google Sheets CSV 연결 설정</div>
+    <div style="color:rgba(255,255,255,0.55);font-size:13px;line-height:1.8;margin-bottom:20px;">
+      Google 스프레드시트에서 <b style="color:#7EB3FF">[파일] → [웹에 게시]</b> 를 클릭하고,<br>
+      각 시트를 <b style="color:#7EB3FF">CSV</b> 형식으로 게시한 URL을 아래에 입력하세요.
+    </div>
+    <div style="margin-bottom:12px;">
+      <div style="color:rgba(255,255,255,0.6);font-size:12px;font-weight:700;margin-bottom:6px;">🏛 대학 참여 신청 시트 CSV URL</div>
+      <input id="csvUnivInput" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-family:inherit;outline:none;" placeholder="https://docs.google.com/spreadsheets/d/…/pub?gid=0&output=csv">
+    </div>
+    <div style="margin-bottom:20px;">
+      <div style="color:rgba(255,255,255,0.6);font-size:12px;font-weight:700;margin-bottom:6px;">🏢 기업·기관 후원 시트 CSV URL</div>
+      <input id="csvCoInput" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.15);border-radius:8px;color:#fff;font-size:13px;font-family:inherit;outline:none;" placeholder="https://docs.google.com/spreadsheets/d/…/pub?gid=1&output=csv">
+    </div>
+    <button onclick="saveAdminCSV()" style="padding:11px 28px;background:#1B3A6B;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;">저장하고 불러오기</button>
+  </div>`;
+}
+
+function saveAdminCSV() {
+  var u = document.getElementById('csvUnivInput').value.trim();
+  var c = document.getElementById('csvCoInput').value.trim();
+  if (!u) { alert('대학 참여 신청 URL을 입력해주세요.'); return; }
+  localStorage.setItem('csvUniv', u);
+  localStorage.setItem('csvCompany', c);
+  CSV_UNIV = u; CSV_COMPANY = c;
+  loadAdminData();
+}
+</script>
+
 </body>
 </html>
